@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nahma Fathima - B.Tech in Computer Science with AI Specialisation at NIAT. Personal portfolio showcasing software projects and original artwork.">
+    <meta name="keywords" content="Nahma Fathima, Portfolio, Computer Science, AI, NIAT, Python, C, C++, JavaScript, HTML, CSS, SQL, Digital Art, Painting">
+    <meta name="author" content="Nahma Fathima">
+    <meta name="theme-color" content="#020409">
+    <title>Nahma Fathima | Personal Portfolio &amp; Art Gallery</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas & Digital Ambient Effects -->
+    <div class="digital-grid-overlay"></div>
+    <div class="ambient-glow-mesh">
+        <div class="ambient-orb orb-purple"></div>
+        <div class="ambient-orb orb-blue"></div>
+        <div class="ambient-orb orb-cyan"></div>
+    </div>
+    <canvas id="cyber-canvas"></canvas>
+
+    <!-- Custom Cursor Glow Trailer -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar-wrapper" id="navbar">
+        <nav class="navbar glass-card">
+            <a href="#hero" class="nav-brand" aria-label="Nahma Fathima Home">
+                <span class="brand-bracket">[</span>
+                <span class="brand-name">NF</span>
+                <span class="brand-bracket">]</span>
+                <span class="brand-dot"></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-terminal"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa-solid fa-cube"></i> Projects</a></li>
+                <li><a href="#certifications" class="nav-link"><i class="fa-solid fa-award"></i> Courses</a></li>
+                <li><a href="#activities" class="nav-link"><i class="fa-solid fa-compass"></i> Activities</a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fa-solid fa-palette"></i> Art Gallery</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Audio Feedback Toggle -->
+                <button class="audio-toggle-btn" id="audio-toggle" title="Toggle Sound Feedback" aria-label="Toggle Audio">
+                    <i class="fa-solid fa-volume-high" id="audio-icon"></i>
+                </button>
+
+                <!-- Status Badge -->
+                <div class="system-status">
+                    <span class="status-indicator"></span>
+                    <span class="status-label">B.TECH &bull; NIAT</span>
+                </div>
+
+                <!-- Contact Action -->
+                <a href="#contact" class="btn btn-outline-glow btn-sm">
+                    <span>Contact Me</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge glass-card">
+                        <span class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="badge-text">B.TECH IN COMPUTER SCIENCE &bull; AI SPECIALISATION &bull; NIAT</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="greeting-lead">Hello, I'm</span>
+                        <span class="glitch-text glow-gradient-text" data-text="Nahma Fathima">Nahma Fathima</span>
+                    </h1>
+
+                    <div class="hero-role-wrapper">
+                        <span class="role-static">Focused on</span>
+                        <span class="dynamic-role" id="dynamic-role">Computer Science &amp; AI</span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Computer Science student with an Artificial Intelligence specialisation at NIAT, technology enthusiast, and creative artist. Passionate about software development, robotics, innovation, and original fine art.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary-glow">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#gallery" class="btn btn-glass">
+                            <span>Art Gallery</span>
+                            <i class="fa-solid fa-palette"></i>
+                        </a>
+                        <a href="mailto:nahmafathima16@gmail.com" class="btn btn-cyber-outline">
+                            <span>Contact Me</span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <!-- Authentic Highlights -->
+                    <div class="hero-metrics glass-card">
+                        <div class="metric-item">
+                            <span class="metric-number">NIAT</span>
+                            <span class="metric-label">B.Tech &bull; CS (AI)</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">Bootcamp</span>
+                            <span class="metric-label">NIAT Project Build</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-number">Art</span>
+                            <span class="metric-label">Original Paintings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="cyber-avatar-frame">
+                        <div class="cyber-ring ring-outer"></div>
+                        <div class="cyber-ring ring-middle"></div>
+                        <div class="cyber-ring ring-inner"></div>
+                        <div class="avatar-card glass-card">
+                            <div class="avatar-glow-overlay"></div>
+                            <div class="avatar-terminal-header">
+                                <span class="term-dot dot-red"></span>
+                                <span class="term-dot dot-yellow"></span>
+                                <span class="term-dot dot-green"></span>
+                                <span class="term-title">nahma@student-hub:~</span>
+                            </div>
+                            <div class="avatar-display">
+                                <img src="assets/images/avatar.svg" alt="Nahma Fathima Monogram" class="avatar-img">
+                            </div>
+                            <div class="avatar-hud-tags">
+                                <span class="hud-pill"><i class="fa-solid fa-code"></i> Computer Science &amp; AI</span>
+                                <span class="hud-pill"><i class="fa-solid fa-palette"></i> Drawing &amp; Fine Art</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down-hint">
+                <a href="#about" aria-label="Scroll down">
+                    <span class="mouse-icon"><span class="wheel"></span></span>
+                    <span class="scroll-text">SCROLL DOWN</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// ABOUT ME</span>
+                    <h2 class="section-title">Curiosity, Code &amp; <span class="glow-gradient-text">Artistic Vision</span></h2>
+                    <p class="section-subtitle">A natural and authentic perspective on my studies, technical interests, and creative passions.</p>
+                </div>
+
+                <div class="about-bento-grid">
+                    <!-- Narrative -->
+                    <div class="bento-card bento-story glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="bento-icon-badge">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h3 class="bento-title">My Journey</h3>
+                        <p class="bento-text">
+                            I am <strong>Nahma Fathima</strong>, currently pursuing my B.Tech in Computer Science with an Artificial Intelligence specialisation at <strong>NIAT</strong>. My enthusiasm for technology stems from a genuine desire to understand how modern intelligent systems function, how software bridges abstract logic with practical utility, and how physical computing intersects with robotics.
+                        </p>
+                        <p class="bento-text">
+                            Alongside programming, I have a deep creative passion for <strong>drawing and painting</strong>. Practicing physical art instills an eye for detail, balance, and aesthetic harmony that directly informs how I approach software design and interface creation.
+                        </p>
+                        <p class="bento-text">
+                            During an NIAT bootcamp, I developed my first technology project, <strong>Digital Second Brain (DSD)</strong>, and I actively participate in community tech activities like <strong>TinkerHub</strong>, where I explore robotics and collaborative hands-on projects with peers.
+                        </p>
+                        <div class="creed-tags">
+                            <span class="creed-pill"><i class="fa-solid fa-graduation-cap"></i> NIAT &bull; CS (AI)</span>
+                            <span class="creed-pill"><i class="fa-solid fa-brain"></i> AI &amp; Robotics Enthusiast</span>
+                            <span class="creed-pill"><i class="fa-solid fa-palette"></i> Fine Artist</span>
+                        </div>
+                    </div>
+
+                    <!-- Profile HUD -->
+                    <div class="bento-card bento-specs glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="terminal-mini-bar">
+                            <span class="mini-title">// PROFILE OVERVIEW</span>
+                            <span class="mini-status">ID: NF-NIAT</span>
+                        </div>
+                        <ul class="specs-list">
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-user"></i> Full Name</span>
+                                <span class="spec-val">Nahma Fathima</span>
+                            </li>
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-graduation-cap"></i> Current Degree</span>
+                                <span class="spec-val text-neon-blue">B.Tech in CS with AI Specialisation</span>
+                            </li>
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-building-columns"></i> Institution</span>
+                                <span class="spec-val">NIAT</span>
+                            </li>
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-code"></i> Core Languages</span>
+                                <span class="spec-val">Python, C, C++, JavaScript, HTML, CSS, SQL</span>
+                            </li>
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-palette"></i> Creative Media</span>
+                                <span class="spec-val">Drawing, Painting &amp; Digital Art</span>
+                            </li>
+                            <li>
+                                <span class="spec-key"><i class="fa-solid fa-compass"></i> Community</span>
+                                <span class="spec-val">NIAT Bootcamp &bull; TinkerHub</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4 Authentic Interest Focus Cards -->
+                    <div class="bento-card bento-pillars glass-card">
+                        <div class="card-glow-edge"></div>
+                        <h3 class="bento-title"><i class="fa-solid fa-cubes"></i> Core Areas of Interest</h3>
+                        <div class="pillars-grid">
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                                <h4>Artificial Intelligence</h4>
+                                <p>Studying how intelligent algorithms learn, analyze patterns, and power modern decision systems as part of my NIAT curriculum.</p>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-code"></i></div>
+                                <h4>Computer Science</h4>
+                                <p>Developing strong fundamentals in programming logic, algorithms, data structures, and software architecture.</p>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-robot"></i></div>
+                                <h4>Robotics &amp; Innovation</h4>
+                                <p>Exploring physical computing, robotics, drones, and hands-on technological experiments through community activities.</p>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-palette"></i></div>
+                                <h4>Drawing &amp; Painting</h4>
+                                <p>Expressing creativity through physical canvases, pencil drawings, and digital art, blending artistic warmth with technical logic.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy Bento -->
+                    <div class="bento-card bento-quote glass-card">
+                        <div class="card-glow-edge"></div>
+                        <i class="fa-solid fa-quote-left quote-watermark"></i>
+                        <p class="quote-text">
+                            "Learning with sincerity, building through hands-on practice, and combining analytical logic with artistic craft."
+                        </p>
+                        <span class="quote-author">&mdash; Nahma Fathima</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// ACADEMIC FOUNDATION</span>
+                    <h2 class="section-title">Undergraduate <span class="glow-gradient-text">Studies</span></h2>
+                    <p class="section-subtitle">My current higher education program and core academic focus.</p>
+                </div>
+
+                <div class="education-card-container">
+                    <div class="education-card glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="edu-crest-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="edu-body">
+                            <span class="edu-type">UNDERGRADUATE DEGREE PROGRAM</span>
+                            <h3 class="edu-degree">B.Tech in Computer Science with AI Specialisation</h3>
+                            <h4 class="edu-institution text-neon-blue">NIAT</h4>
+                            <p class="edu-description">
+                                Currently pursuing an undergraduate degree in Computer Science, combining foundational computer engineering principles with specialized studies in Artificial Intelligence, programming methodologies, and analytical problem-solving.
+                            </p>
+                            <div class="edu-pills">
+                                <span class="edu-pill">Computer Science</span>
+                                <span class="edu-pill">AI Specialisation</span>
+                                <span class="edu-pill">NIAT</span>
+                                <span class="edu-pill">Software Foundations</span>
+                                <span class="edu-pill">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Technical Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// TECHNICAL ARSENAL</span>
+                    <h2 class="section-title">Skills &amp; <span class="glow-gradient-text">Capabilities</span></h2>
+                    <p class="section-subtitle">My actual programming languages, web development capabilities, and creative competencies.</p>
+                </div>
+
+                <!-- Skills Category Tabs -->
+                <div class="skills-tab-bar">
+                    <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+                    <button class="skill-tab-btn" data-filter="programming">Programming &amp; Web</button>
+                    <button class="skill-tab-btn" data-filter="creative">Creative Arts</button>
+                    <button class="skill-tab-btn" data-filter="professional">Professional</button>
+                </div>
+
+                <!-- Verified Skills Grid -->
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Python -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-python"><i class="fa-brands fa-python"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Python</h4>
+                                <span class="skill-level">Core Language</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Foundational programming, logic building, data handling, and computational problem-solving.</p>
+                    </div>
+
+                    <!-- C -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-three"><i class="fa-solid fa-c"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">C</h4>
+                                <span class="skill-level">Systems Programming</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Procedural programming, memory addressing, pointers, and underlying computer systems architecture.</p>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-ai"><i class="fa-solid fa-code"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">C++</h4>
+                                <span class="skill-level">Object-Oriented</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Object-oriented programming, data structures, and high-performance computational efficiency.</p>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-ts"><i class="fa-brands fa-js"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">JavaScript</h4>
+                                <span class="skill-level">Web Programming</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Interactive web applications, DOM scripting, asynchronous events, and dynamic user interfaces.</p>
+                    </div>
+
+                    <!-- HTML -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-tailwind"><i class="fa-brands fa-html5"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">HTML</h4>
+                                <span class="skill-level">Markup Language</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Semantic page structuring, accessible document hierarchy, and clean web architecture.</p>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-react"><i class="fa-brands fa-css3-alt"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">CSS</h4>
+                                <span class="skill-level">Styling &amp; Layout</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Responsive layouts, Flexbox, CSS Grid, custom color systems, and modern glassmorphic aesthetics.</p>
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="skill-card glass-card" data-category="programming">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-db"><i class="fa-solid fa-database"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">SQL</h4>
+                                <span class="skill-level">Database Management</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Relational database querying, structured data definition, schema handling, and records retrieval.</p>
+                    </div>
+
+                    <!-- Creative: Digital Art -->
+                    <div class="skill-card glass-card" data-category="creative">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-figma"><i class="fa-solid fa-palette"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Digital Art</h4>
+                                <span class="skill-level">Creative Skill</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Creating original digital drawings, character art, concept designs, and visual compositions.</p>
+                    </div>
+
+                    <!-- Creative: Drawing & Painting -->
+                    <div class="skill-card glass-card" data-category="creative">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-vector"><i class="fa-solid fa-paintbrush"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Drawing &amp; Painting</h4>
+                                <span class="skill-level">Fine Art</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Traditional physical artwork, pencil sketches, and canvas paintings created with attention to light and form.</p>
+                    </div>
+
+                    <!-- Professional: Teamwork -->
+                    <div class="skill-card glass-card" data-category="professional">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-models"><i class="fa-solid fa-users"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Teamwork</h4>
+                                <span class="skill-level">Professional Skill</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Collaborating effectively in technical bootcamps, workshops, and group engineering initiatives.</p>
+                    </div>
+
+                    <!-- Professional: Leadership -->
+                    <div class="skill-card glass-card" data-category="professional">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-ai"><i class="fa-solid fa-flag"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Leadership</h4>
+                                <span class="skill-level">Professional Skill</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Taking initiative, coordinating responsibilities within teams, and guiding collaborative goals.</p>
+                    </div>
+
+                    <!-- Professional: Problem-Solving -->
+                    <div class="skill-card glass-card" data-category="professional">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-db"><i class="fa-solid fa-puzzle-piece"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Problem-Solving</h4>
+                                <span class="skill-level">Analytical Skill</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Breaking down complex programming hurdles and engineering concepts into structured solutions.</p>
+                    </div>
+
+                    <!-- Professional: Creative Thinking -->
+                    <div class="skill-card glass-card" data-category="professional">
+                        <div class="skill-card-top">
+                            <div class="skill-icon-wrap icon-three"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="skill-meta">
+                                <h4 class="skill-name">Creative Thinking</h4>
+                                <span class="skill-level">Innovative Skill</span>
+                            </div>
+                        </div>
+                        <p class="skill-card-desc">Bringing an artistic perspective to technical challenges and exploring innovative project angles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// SELECTED WORKS</span>
+                    <h2 class="section-title">Actual <span class="glow-gradient-text">Creations</span></h2>
+                    <p class="section-subtitle">Real, functional web applications and concepts I have built and published.</p>
+                </div>
+
+                <div class="projects-grid projects-featured-grid" id="projects-grid">
+                    <!-- Project 1: Digital Second Brain (DSD) -->
+                    <article class="project-card glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-preview-wrap">
+                            <img src="assets/images/dsb-preview.svg" alt="Digital Second Brain (DSD) Preview" class="project-img">
+                            <div class="project-overlay-badge">
+                                <span class="status-live-dot"></span> LIVE PROJECT
+                            </div>
+                            <div class="project-category-tag">NIAT Bootcamp Concept</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header-meta">
+                                <span class="project-milestone-tag">FIRST TECH PROJECT</span>
+                            </div>
+                            <h3 class="project-title">Digital Second Brain (DSD)</h3>
+                            <p class="project-tagline-text">"Forget Less. Learn Faster. Live Smarter."</p>
+                            <p class="project-summary">
+                                A personal digital memory and knowledge management platform. It includes a Memory Vault where users can save, organize, and retrieve their important memories, ideas, and information in one centralized place. Developed as my first technology project during my NIAT bootcamp.
+                            </p>
+                            <div class="project-highlights">
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> Memory Vault organization concept</span>
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> Centralized knowledge retrieval</span>
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> Conceived during NIAT Bootcamp</span>
+                            </div>
+                            <div class="tech-pills">
+                                <span class="tech-pill">Web Application</span>
+                                <span class="tech-pill">Memory Vault</span>
+                                <span class="tech-pill">NIAT Bootcamp</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://digitalsecondbrain.lovable.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-sm">
+                                    <span>Visit Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Snapclone -->
+                    <article class="project-card glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="project-preview-wrap">
+                            <img src="assets/images/snapclone-preview.svg" alt="Snapclone Web Application Preview" class="project-img">
+                            <div class="project-overlay-badge">
+                                <span class="status-live-dot"></span> LIVE PROJECT
+                            </div>
+                            <div class="project-category-tag">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header-meta">
+                                <span class="project-milestone-tag">FEATURED PROJECT</span>
+                            </div>
+                            <h3 class="project-title">Snapclone</h3>
+                            <p class="project-tagline-text">"Snapchat-Inspired Web Application"</p>
+                            <p class="project-summary">
+                                A Snapchat-inspired application that I developed as a project. Features an engaging interface, interactive camera and feed layouts, and an authentication flow inspired by social storytelling platforms.
+                            </p>
+                            <div class="project-highlights">
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> Snapchat-inspired interactive interface</span>
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> User authentication and onboarding flow</span>
+                                <span><i class="fa-solid fa-check text-neon-blue"></i> Responsive mobile-first layout</span>
+                            </div>
+                            <div class="tech-pills">
+                                <span class="tech-pill">HTML / CSS</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Interactive UI</span>
+                            </div>
+                            <div class="project-card-actions">
+                                <a href="https://fleeting-filters-friends.lovable.app/auth" target="_blank" rel="noopener noreferrer" class="btn btn-primary-glow btn-sm">
+                                    <span>Visit Project</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Courses & Certifications Section -->
+        <section id="certifications" class="section certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// COURSES &amp; CERTIFICATIONS</span>
+                    <h2 class="section-title">Verified <span class="glow-gradient-text">Coursework</span></h2>
+                    <p class="section-subtitle">Official courses and specialized learning completions.</p>
+                </div>
+
+                <div class="certification-card-container">
+                    <div class="cert-card glass-card">
+                        <div class="card-glow-edge"></div>
+                        <div class="cert-ribbon-badge">
+                            <i class="fa-solid fa-award"></i>
+                            <span>COMPLETED</span>
+                        </div>
+
+                        <div class="cert-grid-layout">
+                            <div class="cert-details-side">
+                                <span class="cert-kicker">COURSES &amp; CERTIFICATIONS</span>
+                                <h3 class="cert-title">CWEECE – Psychology</h3>
+                                
+                                <div class="cert-metrics-row">
+                                    <div class="cert-metric-box">
+                                        <span class="metric-box-label">DURATION</span>
+                                        <span class="metric-box-val text-neon-blue">3 Months</span>
+                                    </div>
+                                    <div class="cert-metric-box">
+                                        <span class="metric-box-label">STATUS</span>
+                                        <span class="metric-box-val text-purple">Completed</span>
+                                    </div>
+                                    <div class="cert-metric-box">
+                                        <span class="metric-box-label">CERTIFICATE</span>
+                                        <span class="metric-box-val text-neon-blue">Received</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cert-frame-side">
+                                <div class="cert-display-frame">
+                                    <img src="assets/images/certificate-placeholder.svg" alt="CWEECE – Psychology Certificate Frame" class="cert-img-view">
+                                    <div class="cert-frame-label">
+                                        <span>CWEECE – Psychology Certificate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Activities & Learning Section -->
+        <section id="activities" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// LEARNING &amp; ACTIVITIES</span>
+                    <h2 class="section-title">Activities &amp; <span class="glow-gradient-text">Experiences</span></h2>
+                    <p class="section-subtitle">Real experiences, technical bootcamps, and community technological explorations.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-track"></div>
+
+                    <!-- Milestone 1: Current Education -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-pulse"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="card-glow-edge"></div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period"><i class="fa-solid fa-graduation-cap"></i> CURRENT STUDIES</span>
+                                <span class="timeline-role-badge">NIAT</span>
+                            </div>
+                            <h3 class="timeline-role">B.Tech in Computer Science with AI Specialisation</h3>
+                            <h4 class="timeline-company text-neon-blue">NIAT</h4>
+                            <p class="timeline-desc">
+                                Actively pursuing undergraduate engineering studies in Computer Science with an AI specialisation at NIAT, learning core programming languages, systems logic, and computational theory.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Computer Science</span>
+                                <span>AI Specialisation</span>
+                                <span>NIAT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2: NIAT Bootcamp -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-pulse"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="card-glow-edge"></div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period"><i class="fa-solid fa-laptop-code"></i> TECHNICAL BOOTCAMP</span>
+                                <span class="timeline-role-badge">PROJECT BUILD</span>
+                            </div>
+                            <h3 class="timeline-role">NIAT Bootcamp Participant</h3>
+                            <h4 class="timeline-company text-neon-blue">NIAT Bootcamp</h4>
+                            <p class="timeline-desc">
+                                Participated in an intensive bootcamp organized at NIAT, where I developed my first technology project: the <strong>Digital Second Brain (DSD)</strong>.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Digital Second Brain</span>
+                                <span>NIAT Bootcamp</span>
+                                <span>Memory Vault</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3: TinkerHub Activities -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-pulse"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="card-glow-edge"></div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period"><i class="fa-solid fa-microchip"></i> COMMUNITY EXPLORATION</span>
+                                <span class="timeline-role-badge">TECH ACTIVITIES</span>
+                            </div>
+                            <h3 class="timeline-role">TinkerHub Technology Activities</h3>
+                            <h4 class="timeline-company text-neon-blue">TinkerHub Community</h4>
+                            <p class="timeline-desc">
+                                Actively attended TinkerHub activities exploring robotics, drones, and practical technological experiments, expanding my hands-on knowledge in emerging technology fields.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Robotics</span>
+                                <span>Drones</span>
+                                <span>Practical Tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4: Collaborative Group Projects -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot-pulse"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="card-glow-edge"></div>
+                            <div class="timeline-meta">
+                                <span class="timeline-period"><i class="fa-solid fa-people-group"></i> COLLABORATION</span>
+                                <span class="timeline-role-badge">TEAMWORK</span>
+                            </div>
+                            <h3 class="timeline-role">Collaborative Group Projects</h3>
+                            <h4 class="timeline-company text-neon-blue">Team Projects &amp; Peer Learning</h4>
+                            <p class="timeline-desc">
+                                Participated in group projects, developing valuable teamwork, peer coordination, and collaborative problem-solving experience while working together toward shared project goals.
+                            </p>
+                            <div class="timeline-skills">
+                                <span>Teamwork</span>
+                                <span>Leadership</span>
+                                <span>Problem-Solving</span>
+                                <span>Creative Thinking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Art Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// ORIGINAL ARTWORK</span>
+                    <h2 class="section-title">The <span class="glow-gradient-text">Art Gallery</span></h2>
+                    <p class="section-subtitle">Dedicated exclusively to my original physical drawings, sketches, and paintings. Click any piece to enlarge.</p>
+                </div>
+
+                <!-- Artwork Showcase Grid -->
+                <div class="artwork-grid" id="artwork-grid">
+                    <!-- Artwork 1: florish.entrance -->
+                    <div class="artwork-card glass-card" data-title="florish.entrance" data-caption="Original Artwork &bull; Nahma Fathima">
+                        <div class="card-glow-edge"></div>
+                        <div class="artwork-frame">
+                            <img src="assets/artworks/florish.entrance.jpeg" alt="florish.entrance" class="artwork-img" loading="lazy">
+                            <div class="artwork-hover-overlay">
+                                <span class="enlarge-pill"><i class="fa-solid fa-magnifying-glass-plus"></i> View Artwork</span>
+                            </div>
+                        </div>
+                        <div class="artwork-meta">
+                            <span class="artwork-tag">ORIGINAL ARTWORK</span>
+                            <h4 class="artwork-title">florish.entrance</h4>
+                            <p class="artwork-caption">Original drawing and physical artwork by Nahma Fathima.</p>
+                        </div>
+                    </div>
+
+                    <!-- Artwork 2: koifish.art -->
+                    <div class="artwork-card glass-card" data-title="koifish.art" data-caption="Original Artwork &bull; Nahma Fathima">
+                        <div class="card-glow-edge"></div>
+                        <div class="artwork-frame">
+                            <img src="assets/artworks/koifish.art.jpeg" alt="koifish.art" class="artwork-img" loading="lazy">
+                            <div class="artwork-hover-overlay">
+                                <span class="enlarge-pill"><i class="fa-solid fa-magnifying-glass-plus"></i> View Artwork</span>
+                            </div>
+                        </div>
+                        <div class="artwork-meta">
+                            <span class="artwork-tag">ORIGINAL ARTWORK</span>
+                            <h4 class="artwork-title">koifish.art</h4>
+                            <p class="artwork-caption">Original drawing and physical artwork by Nahma Fathima.</p>
+                        </div>
+                    </div>
+
+                    <!-- Artwork 3: turtle.art -->
+                    <div class="artwork-card glass-card" data-title="turtle.art" data-caption="Original Artwork &bull; Nahma Fathima">
+                        <div class="card-glow-edge"></div>
+                        <div class="artwork-frame">
+                            <img src="assets/artworks/turtle.art.jpeg" alt="turtle.art" class="artwork-img" loading="lazy">
+                            <div class="artwork-hover-overlay">
+                                <span class="enlarge-pill"><i class="fa-solid fa-magnifying-glass-plus"></i> View Artwork</span>
+                            </div>
+                        </div>
+                        <div class="artwork-meta">
+                            <span class="artwork-tag">ORIGINAL ARTWORK</span>
+                            <h4 class="artwork-title">turtle.art</h4>
+                            <p class="artwork-caption">Original drawing and physical artwork by Nahma Fathima.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">// GET IN TOUCH</span>
+                    <h2 class="section-title">Connect <span class="glow-gradient-text">With Me</span></h2>
+                    <p class="section-subtitle">Feel free to reach out for collaborations, academic discussions, or to connect!</p>
+                </div>
+
+                <div class="contact-cta-card glass-card">
+                    <div class="card-glow-edge"></div>
+                    <div class="contact-cta-content">
+                        <div class="contact-icon-circle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-cta-title">Send a Direct Message</h3>
+                        <p class="contact-cta-desc">
+                            Click below to open your preferred mail client and send me an email directly.
+                        </p>
+                        
+                        <!-- Contact Me Button ONLY (email address is NOT visible as text) -->
+                        <div class="contact-button-wrapper">
+                            <a href="mailto:nahmafathima16@gmail.com" class="btn btn-primary-glow btn-lg">
+                                <span>Contact Me</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </a>
+                        </div>
+
+                        <!-- Verified Channels -->
+                        <div class="contact-social-channels">
+                            <span class="social-label">// VERIFIED PROFILES &amp; CHANNELS</span>
+                            <div class="social-links-row">
+                                <a href="https://github.com/NahmaExplorer" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/nahma-fathima-516954420" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Profile">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="brand-bracket">[</span>
+                <span class="brand-name">Nahma Fathima</span>
+                <span class="brand-bracket">]</span>
+                <p class="footer-tagline">B.Tech in Computer Science with AI Specialisation &bull; NIAT &bull; Creative Artist</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Courses</a>
+                <a href="#activities">Activities</a>
+                <a href="#gallery">Art Gallery</a>
+                <a href="mailto:nahmafathima16@gmail.com">Contact Me</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Nahma Fathima. Authentic Personal Portfolio.</p>
+                <div class="footer-social-row">
+                    <a href="https://github.com/NahmaExplorer" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <span class="footer-dot">&bull;</span>
+                    <a href="https://www.linkedin.com/in/nahma-fathima-516954420" target="_blank" rel="noopener noreferrer" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                    <span class="footer-dot">&bull;</span>
+                    <a href="mailto:nahmafathima16@gmail.com" class="footer-social-link"><i class="fa-solid fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Art Gallery (Click-to-Enlarge) -->
+    <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-dialog glass-card">
+            <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close enlarged preview">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="lightbox-image-wrap">
+                <img src="" alt="Enlarged Artwork View" id="lightbox-img" class="lightbox-img">
+            </div>
+            <div class="lightbox-caption-bar">
+                <h4 class="lightbox-title" id="lightbox-title">Artwork Title</h4>
+                <p class="lightbox-subtitle" id="lightbox-subtitle">Original Drawing / Painting</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
