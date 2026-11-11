@@ -128,7 +128,47 @@ button, input, textarea, select {
 .text-purple {
     color: var(--electric-purple) !important;
 }
+* {
+  box-sizing: border-box;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .gallery,
+  .projects {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery,
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: clamp(28px, 7vw, 45px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 25px 15px;
+  }
+}
 /* --------------------------------------------------------------------------
    3. Background Textures, Orbs & Canvas
    -------------------------------------------------------------------------- */
