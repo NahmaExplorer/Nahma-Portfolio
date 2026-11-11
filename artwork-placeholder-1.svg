@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="artBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a18"/>
+      <stop offset="100%" stop-color="#120c29"/>
+    </linearGradient>
+    <filter id="artGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="700" fill="url(#artBg1)" rx="16"/>
+  <!-- Elegant Canvas Frame -->
+  <rect x="30" y="30" width="540" height="640" rx="12" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <rect x="45" y="45" width="510" height="610" rx="8" fill="rgba(8, 16, 40, 0.45)" stroke="#a855f7" stroke-opacity="0.2"/>
+  
+  <!-- Artwork Palette & Brush Icon -->
+  <circle cx="300" cy="270" r="70" fill="rgba(0, 240, 255, 0.08)" stroke="#00f0ff" stroke-width="2" filter="url(#artGlow)"/>
+  <path d="M 270,260 Q 290,225 320,245 Q 345,260 330,285 Q 315,305 285,295 Z" fill="rgba(168, 85, 247, 0.4)" stroke="#a855f7" stroke-width="2"/>
+  <circle cx="280" cy="250" r="6" fill="#00f0ff"/>
+  <circle cx="310" cy="255" r="5" fill="#facc15"/>
+  <circle cx="320" cy="280" r="5" fill="#ef4444"/>
+  <circle cx="295" cy="285" r="5" fill="#10b981"/>
+
+  <!-- Placeholder Text -->
+  <text x="300" y="390" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" text-anchor="middle">ORIGINAL DRAWING / PAINTING</text>
+  <text x="300" y="425" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="13" text-anchor="middle">[ Artwork Slot 01 // Placeholder ]</text>
+  <text x="300" y="465" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle">Replace with your drawing or painting</text>
+  <text x="300" y="490" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">assets/images/artwork1.jpg</text>
+
+  <!-- Tag Pill -->
+  <rect x="220" y="540" width="160" height="34" rx="17" fill="rgba(168, 85, 247, 0.15)" stroke="#a855f7" stroke-opacity="0.4"/>
+  <text x="300" y="562" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">ORIGINAL ARTWORK</text>
+</svg>

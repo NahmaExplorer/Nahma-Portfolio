@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="certBgCyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08102a"/>
+      <stop offset="50%" stop-color="#0e173e"/>
+      <stop offset="100%" stop-color="#040816"/>
+    </linearGradient>
+    <linearGradient id="certNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="certGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Certificate Base -->
+  <rect width="700" height="500" fill="url(#certBgCyber)" rx="16"/>
+
+  <!-- Glowing Borders -->
+  <rect x="24" y="24" width="652" height="452" rx="10" fill="none" stroke="url(#certNeon)" stroke-width="2" filter="url(#certGlow)"/>
+  <rect x="36" y="36" width="628" height="428" rx="8" fill="none" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <!-- Corner Accents -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none">
+    <path d="M 45,65 L 45,45 L 65,45"/>
+    <path d="M 655,65 L 655,45 L 635,45"/>
+    <path d="M 45,435 L 45,455 L 65,455"/>
+    <path d="M 655,435 L 655,455 L 635,455"/>
+  </g>
+
+  <!-- Seal Emblem -->
+  <circle cx="350" cy="115" r="36" fill="rgba(0, 240, 255, 0.12)" stroke="#00f0ff" stroke-width="2"/>
+  <circle cx="350" cy="115" r="30" fill="none" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <polygon points="350,96 355,108 368,109 358,118 361,130 350,123 339,130 342,118 332,109 345,108" fill="#00f0ff"/>
+
+  <!-- Certificate Text -->
+  <text x="350" y="185" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#00f0ff" text-anchor="middle" letter-spacing="4">COURSEWORK &amp; CERTIFICATION</text>
+  
+  <text x="350" y="240" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="700" fill="#ffffff" text-anchor="middle">CWEECE – Psychology</text>
+  
+  <line x1="200" y1="265" x2="500" y2="265" stroke="url(#certNeon)" stroke-width="1.5"/>
+  <circle cx="350" cy="265" r="3.5" fill="#a855f7"/>
+
+  <!-- Meta Badges -->
+  <rect x="140" y="295" width="125" height="42" rx="6" fill="rgba(0, 240, 255, 0.08)" stroke="#00f0ff" stroke-opacity="0.3"/>
+  <text x="202" y="312" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">DURATION</text>
+  <text x="202" y="328" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#00f0ff" text-anchor="middle">3 Months</text>
+
+  <rect x="287" y="295" width="125" height="42" rx="6" fill="rgba(168, 85, 247, 0.1)" stroke="#a855f7" stroke-opacity="0.3"/>
+  <text x="350" y="312" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">STATUS</text>
+  <text x="350" y="328" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#c084fc" text-anchor="middle">Completed</text>
+
+  <rect x="435" y="295" width="125" height="42" rx="6" fill="rgba(0, 240, 255, 0.08)" stroke="#00f0ff" stroke-opacity="0.3"/>
+  <text x="497" y="312" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">CERTIFICATE</text>
+  <text x="497" y="328" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#00f0ff" text-anchor="middle">Received</text>
+
+  <!-- Upload Prompt / Space for actual certificate -->
+  <text x="350" y="420" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b" text-anchor="middle">[ Space reserved for physical certificate photograph / scan ]</text>
+</svg>

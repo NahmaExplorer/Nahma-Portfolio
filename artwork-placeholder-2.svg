@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="artBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040816"/>
+      <stop offset="100%" stop-color="#140a28"/>
+    </linearGradient>
+    <filter id="artGlow2">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="700" fill="url(#artBg2)" rx="16"/>
+  <rect x="30" y="30" width="540" height="640" rx="12" fill="none" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="8 6"/>
+  <rect x="45" y="45" width="510" height="610" rx="8" fill="rgba(8, 16, 40, 0.45)" stroke="#00f0ff" stroke-opacity="0.2"/>
+  
+  <circle cx="300" cy="270" r="70" fill="rgba(168, 85, 247, 0.08)" stroke="#a855f7" stroke-width="2" filter="url(#artGlow2)"/>
+  <!-- Pen / Canvas Icon -->
+  <path d="M 270,300 L 320,230 L 335,245 L 285,315 Z" fill="#00f0ff" opacity="0.8"/>
+  <polygon points="265,320 270,300 285,315" fill="#facc15"/>
+  <line x1="260" y1="330" x2="340" y2="330" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="300" y="390" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" text-anchor="middle">ORIGINAL DRAWING / SKETCH</text>
+  <text x="300" y="425" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="13" text-anchor="middle">[ Artwork Slot 02 // Placeholder ]</text>
+  <text x="300" y="465" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle">Replace with your drawing or sketch</text>
+  <text x="300" y="490" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">assets/images/artwork2.jpg</text>
+
+  <rect x="220" y="540" width="160" height="34" rx="17" fill="rgba(0, 240, 255, 0.12)" stroke="#00f0ff" stroke-opacity="0.4"/>
+  <text x="300" y="562" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">ORIGINAL SKETCH</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scBgCyber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a18"/>
+      <stop offset="60%" stop-color="#140a24"/>
+      <stop offset="100%" stop-color="#020409"/>
+    </linearGradient>
+    <linearGradient id="snapCyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="scBlur">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="480" fill="url(#scBgCyber)" rx="16"/>
+
+  <!-- Top bar -->
+  <rect x="50" y="35" width="700" height="42" rx="8" fill="rgba(18, 25, 55, 0.75)" stroke="#a855f7" stroke-opacity="0.35"/>
+  <circle cx="75" cy="56" r="5" fill="#ef4444"/>
+  <circle cx="95" cy="56" r="5" fill="#eab308"/>
+  <circle cx="115" cy="56" r="5" fill="#22c55e"/>
+  <text x="400" y="61" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">fleeting-filters-friends.lovable.app // Snapclone Web Application</text>
+
+  <!-- Mobile phone mockup centered -->
+  <rect x="300" y="105" width="200" height="280" rx="24" fill="#030612" stroke="#00f0ff" stroke-width="2.5" filter="url(#scBlur)"/>
+  
+  <!-- Notch -->
+  <rect x="360" y="115" width="80" height="10" rx="5" fill="#0d1836"/>
+
+  <!-- Ghost / Camera Interface Graphic -->
+  <circle cx="400" cy="210" r="45" fill="rgba(255, 252, 0, 0.12)" stroke="#fffc00" stroke-width="2"/>
+  <path d="M 388,202 Q 400,185 412,202 Q 420,218 412,226 Q 400,233 388,226 Q 380,218 388,202 Z" fill="#fffc00" opacity="0.95"/>
+  <circle cx="396" cy="207" r="2.5" fill="#030612"/>
+  <circle cx="404" cy="207" r="2.5" fill="#030612"/>
+
+  <!-- Camera Shutter Button -->
+  <circle cx="400" cy="335" r="20" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="400" cy="335" r="15" fill="rgba(0, 240, 255, 0.8)"/>
+
+  <!-- Stories & Friends Pills -->
+  <rect x="75" y="180" width="180" height="65" rx="10" fill="rgba(10, 20, 50, 0.75)" stroke="#00f0ff" stroke-opacity="0.3"/>
+  <text x="95" y="208" fill="#00f0ff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Filters &amp; Stories</text>
+  <text x="95" y="228" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Ephemeral sharing UI</text>
+
+  <rect x="545" y="180" width="180" height="65" rx="10" fill="rgba(10, 20, 50, 0.75)" stroke="#a855f7" stroke-opacity="0.3"/>
+  <text x="565" y="208" fill="#c084fc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Friends &amp; Auth</text>
+  <text x="565" y="228" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Secure user session</text>
+
+  <!-- Connectors -->
+  <path d="M 255,212 L 300,225" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M 545,212 L 500,225" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Bottom Title -->
+  <text x="400" y="425" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" text-anchor="middle">Snapclone</text>
+  <text x="400" y="450" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">SNAPCHAT-INSPIRED WEB APPLICATION</text>
+</svg>

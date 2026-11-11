@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a18"/>
+      <stop offset="100%" stop-color="#140a24"/>
+    </linearGradient>
+    <linearGradient id="snapGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fffc00"/>
+      <stop offset="50%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="scBlur">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="480" fill="url(#scBg)" rx="16"/>
+
+  <!-- Top bar -->
+  <rect x="50" y="35" width="700" height="40" rx="8" fill="rgba(18, 25, 55, 0.7)" stroke="#a855f7" stroke-opacity="0.3"/>
+  <circle cx="75" cy="55" r="5" fill="#ef4444"/>
+  <circle cx="95" cy="55" r="5" fill="#eab308"/>
+  <circle cx="115" cy="55" r="5" fill="#22c55e"/>
+  <text x="400" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">fleeting-filters-friends.lovable.app // Snapchat-Inspired App</text>
+
+  <!-- Mobile phone mockup centered -->
+  <rect x="290" y="105" width="220" height="310" rx="26" fill="#030612" stroke="#00f0ff" stroke-width="2.5" filter="url(#scBlur)"/>
+  
+  <!-- Notch -->
+  <rect x="360" y="115" width="80" height="12" rx="6" fill="#0d1836"/>
+
+  <!-- Ghost / Camera Interface Graphic -->
+  <circle cx="400" cy="225" r="48" fill="rgba(255, 252, 0, 0.15)" stroke="#fffc00" stroke-width="2"/>
+  <path d="M 385,215 Q 400,195 415,215 Q 425,235 415,245 Q 400,255 385,245 Q 375,235 385,215 Z" fill="#fffc00" opacity="0.9"/>
+  <circle cx="395" cy="220" r="3" fill="#030612"/>
+  <circle cx="405" cy="220" r="3" fill="#030612"/>
+
+  <!-- Camera Shutter Button -->
+  <circle cx="400" cy="365" r="24" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="400" cy="365" r="18" fill="rgba(0, 240, 255, 0.8)"/>
+
+  <!-- Stories & Friends Pills -->
+  <rect x="80" y="180" width="160" height="60" rx="10" fill="rgba(10, 20, 50, 0.65)" stroke="#00f0ff" stroke-opacity="0.25"/>
+  <text x="100" y="206" fill="#00f0ff" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Filters &amp; Feeds</text>
+  <text x="100" y="225" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Ephemeral sharing</text>
+
+  <rect x="560" y="180" width="160" height="60" rx="10" fill="rgba(10, 20, 50, 0.65)" stroke="#a855f7" stroke-opacity="0.25"/>
+  <text x="580" y="206" fill="#c084fc" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600">Friends &amp; Auth</text>
+  <text x="580" y="225" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Secure user session</text>
+
+  <!-- Connectors -->
+  <path d="M 240,210 L 290,225" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M 560,210 L 510,225" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Bottom Badge -->
+  <rect x="250" y="430" width="300" height="32" rx="16" fill="rgba(168, 85, 247, 0.15)" stroke="#a855f7" stroke-opacity="0.4"/>
+  <text x="400" y="451" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">SNAPCHAT-INSPIRED APPLICATION</text>
+</svg>
