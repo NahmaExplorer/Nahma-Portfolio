@@ -169,6 +169,56 @@ body {
     padding: 25px 15px;
   }
 }
+
+/* Career Goals Section */
+.career-goals {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.career-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.career-goals h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.career-intro {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.career-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.career-card {
+    flex: 1 1 280px;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(128,128,128,0.3);
+    transition: transform 0.3s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-8px);
+}
+
+.career-card h3 {
+    margin-bottom: 15px;
+}
+
+.career-card p {
+    line-height: 1.7;
+}
 /* --------------------------------------------------------------------------
    3. Background Textures, Orbs & Canvas
    -------------------------------------------------------------------------- */
